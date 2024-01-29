@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+table{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-spacing:3px;
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+td
+{
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+th
+{
+    padding: 10px;
+}
