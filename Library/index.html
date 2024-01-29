@@ -7,8 +7,62 @@
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
+<header>Lybrari</header>
 <body>
-    <header>Lybrari</header>
+    <div>
+        <button id="openForm">
+            Add a book
+        </button>
+
+        <dialog id="dialog">
+            <form method="dialog">
+                <p>
+                    <label>
+                        Book Title:
+                        <input type="text" required>
+                    </label>
+                    
+                    <label>
+                        Author name: 
+                        <input type="text" required>
+                    </label>
+    
+                    <label>
+                        Number of page:
+                        <input type="number" required>
+                    </label>
+    
+                    <label>
+                        Status: 
+                        <select>
+                            <option value="default">Not Read</option>
+                            <option>Read</option>
+                        </select>
+                    </label>
+                </p>
+            </form>
+        </dialog>
+        
+        <table id="tabul">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number of pages</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Start With Why</td>
+                <td>Simon Sinek</td>
+                <td>231</td>
+                <td>Not read</td>
+                <td><button id="delbut">Delete</button></td>
+                <td><button id="readbut">Read</button></td>
+            </tr>
+        </table>
+    </div>
+    <dialog>
+        <button autofocus>Close</button>
+    </dialog>
     
 </body>
 </html>
