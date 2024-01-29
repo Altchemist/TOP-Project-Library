@@ -27,13 +27,42 @@ Book.prototype.hasRead = function()
     return this.read;
 }
 
+myLibrary.push(new Book("The Obstacle is the way", "Ryan Holiday", "200", "Not read"))
+myLibrary.push(new Book("The Obstacle is the way", "Ryan Holiday", "200", "Not read"))
+myLibrary.push(new Book("Start With Why", "Ryan Holiday", "200", "Not read"))
+
 function addBook() {
-    const title = window.prompt("What is the title of the book: ")
-    const author = window.prompt("Who is author of book: ");
-    const pages = window.prompt("How many number of pages: ");
-    const read = window.prompt("Have you read: ");
+    // const title = window.prompt("What is the title of the book: ")
+    // const author = window.prompt("Who is author of book: ");
+    // const pages = window.prompt("How many number of pages: ");
+    // const read = window.prompt("Have you read: ");
     
-    myLibrary.push(new Book(title, author, pages, read));
+    // myLibrary.push(new Book(title, author, pages, read));
 }
 
-addBook();
+function displayBook()
+{
+    let table = document.getElementById("tabul");
+    for(obj of myLibrary)
+    {
+        let tableRow = document.createElement("tr");
+        table.appendChild(tableRow);
+        let title = document.createElement("td");
+        title.textContent = obj.getTitle();
+        tableRow.appendChild(title);
+        
+        let author = document.createElement("td");
+        author.textContent = obj.getAuthor();
+        tableRow.appendChild(author);
+
+        let page = document.createElement("td");
+        page.textContent = obj.getPages();
+        tableRow.appendChild(page)
+
+        let read = document.createElement("td");
+        read.textContent = obj.hasRead();
+        tableRow.appendChild(read);
+    }
+}
+
+displayBook()
