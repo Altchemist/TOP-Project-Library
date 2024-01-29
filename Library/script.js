@@ -1,4 +1,6 @@
 let myLibrary = [];
+let openformButton = document.getElementById("openForm");
+let dialogBox = document.getElementById("dialog");
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -64,5 +66,9 @@ function displayBook()
         tableRow.appendChild(read);
     }
 }
+
+openformButton.addEventListener("click", ()=>{
+    dialogBox.showModal();
+});
 
 displayBook()
