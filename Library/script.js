@@ -33,9 +33,6 @@ Book.prototype.hasRead = function()
     return this.read;
 }
 
-myLibrary.push(new Book("The Obstacle is the way", "Ryan Holiday", "200", "Not read"))
-
-
 function displayBook()
 {
     let table = document.getElementById("tabul");
