@@ -36,11 +36,12 @@ Book.prototype.hasRead = function()
 function displayBook()
 {
     let table = document.getElementById("tabul");
+    let tableBody = table.querySelector("tbody");
 
     let obj = myLibrary[myLibrary.length-1];
 
     let tableRow = document.createElement("tr");
-    table.appendChild(tableRow);
+    tableBody.appendChild(tableRow);
     
     let title = document.createElement("td");
     title.textContent = obj.getTitle();
