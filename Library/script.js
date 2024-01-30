@@ -34,8 +34,6 @@ Book.prototype.hasRead = function()
 }
 
 myLibrary.push(new Book("The Obstacle is the way", "Ryan Holiday", "200", "Not read"))
-myLibrary.push(new Book("The Obstacle is the way", "Ryan Holiday", "200", "Not read"))
-myLibrary.push(new Book("Start With Why", "Ryan Holiday", "200", "Not read"))
 
 function addBook() {
     // const title = window.prompt("What is the title of the book: ")
@@ -70,6 +68,18 @@ function displayBook()
     let read = document.createElement("td");
     read.textContent = obj.hasRead();
     tableRow.appendChild(read);
+
+    let delTd = document.createElement("td")
+    let delButton = document.createElement("button");
+    delButton.textContent = "Delete";
+    tableRow.appendChild(delTd);
+    delTd.appendChild(delButton)
+
+    let changeTd = document.createElement("td");
+    let changeReadButton = document.createElement("button");
+    changeReadButton.textContent = "Read";
+    tableRow.appendChild(changeTd);
+    changeTd.appendChild(changeReadButton);
 }
 
 openformButton.addEventListener("click", ()=>{
@@ -95,4 +105,3 @@ addButton.addEventListener("click", ()=>{
     displayBook();
 });
 
-displayBook()
