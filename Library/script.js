@@ -41,6 +41,7 @@ function displayBook()
     let obj = myLibrary[myLibrary.length-1];
 
     let tableRow = document.createElement("tr");
+    tableRow.data = myLibrary.length-1;
     tableBody.appendChild(tableRow);
     
     let title = document.createElement("td");
@@ -56,6 +57,7 @@ function displayBook()
     tableRow.appendChild(page)
     
     let read = document.createElement("td");
+    read.classList.add("status");
     read.textContent = obj.hasRead();
     tableRow.appendChild(read);
 
@@ -70,6 +72,16 @@ function displayBook()
     changeReadButton.textContent = "Read";
     tableRow.appendChild(changeTd);
     changeTd.appendChild(changeReadButton);
+
+    changeReadButton.addEventListener("click", ()=>
+    {
+        let row  = changeReadButton.parentElement.parentElement;
+
+        let status = row.querySelector(".status");
+
+        status.textContent == "Read" ? status.textContent = "Not Read": status.textContent = "Read";
+
+    });
 }
 
 openformButton.addEventListener("click", ()=>{
